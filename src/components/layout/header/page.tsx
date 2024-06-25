@@ -9,16 +9,15 @@ import type { MenuProps } from 'antd';
 
 import styles from './page.module.scss'
 
+import logo from '../../../../public/img/home/logo.webp'
+
 type MenuItem = Required<MenuProps>['items'][number];
 
 function Header() {
 
-  const [isMenuVisible, setIsMenuVisible] = useState(true);
-
   const [current, setCurrent] = useState('home');
   const path = usePathname()
 
-  const [open, setOpen] = useState(false);
   function openNewWindow(url: string) {
     window.open(url, '_blank');
   }
@@ -30,63 +29,38 @@ function Header() {
     {
       label: '学校概况',
       key: 'school',
-      children: [
-        { label: (<Link href="/school/profile">走近华盛达</Link>), key: '/school/profile' },
-        { label: (<Link href="/school/moralEducation">德育特色</Link>), key: '/school/moralEducation' },
-        { label: (<Link href="/school/teaching">教学特色</Link>), key: '/school/teaching' },
-      ],
     },
     {
-      label: (<Link href="/course">班型介绍</Link>),
-      key: '/course',
-    }, {
-      label: (<Link href="/international">国际合作</Link>),
-      key: '/international',
-    },
-    {
-      label: '师资团队',
+      label: '学部建设',
       key: 'team',
       children: [
         { label: (<Link href="/team/management">管理团队</Link>), key: '/team/management' },
         { label: '教学团队', key: '' },
       ],
+    },
+    {
+      label: (<Link href="/course">教育教学</Link>),
+      key: '/course',
     }, {
-      label: (<Link href="/campusClass">校园风采</Link>),
+      label: (<Link href="/international">校园生活</Link>),
+      key: '/international',
+    },
+    {
+      label: (<Link href="/campusClass">学校动态</Link>),
       key: '/campusClass',
     },
     {
-      label: '新闻资讯',
-      key: '/news',
-    }, {
-      label: '升学案例',
-      key: '/case',
-    }, {
-      label: '入学报名',
-      key: 'entranceSchool',
-      children: [
-        {
-          label: (<a onClick={() => openNewWindow('https://mp.weixin.qq.com/s/C2ealJO5Rd4JqakrxUECdw')}>招生简章</a>),
-          key: 'recruitStudent',
-        },
-        { label: (<Link href="/apply/admissionGoal">升学目标</Link>), key: '/apply/admissionGoal' },
-        { label: (<Link href="/apply/scholarship">奖学金</Link>), key: '/apply/scholarship' },
-      ]
+      label: (<a onClick={() => openNewWindow('https://mp.weixin.qq.com/s/C2ealJO5Rd4JqakrxUECdw')}>招生报名</a>),
+      key: 'recruitStudent',
     },
-
   ];
 
   const onClick: MenuProps['onClick'] = (e) => {
     setCurrent(e.key);
-    onClose()
   };
 
-  const onClose = () => {
-    setOpen(false);
-  };
 
-  const openDrawer = () => {
-    setOpen(!open);
-  }
+
 
   useEffect(() => {
     if (path === '/') {
@@ -96,21 +70,16 @@ function Header() {
     }
   }, [path])
 
-  // menu组件小于768隐藏后，放大不会重载，解决这个问题
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMenuVisible(window.innerWidth > 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-
   return (
     <div className={styles.header}>
-
+      <div className={styles.container}>
+        <div className={styles.logoImg}>
+          <Image src={logo} alt=''></Image>
+        </div>
+        <div className={styles.menu}>
+          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+        </div>
+      </div>
     </div>
   )
 }

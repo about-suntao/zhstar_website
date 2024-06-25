@@ -17,8 +17,8 @@ body {
 
 /* menu 下拉菜单样式，挂载在全局，只能全局修改 */
 .ant-menu-light.ant-menu-submenu > .ant-menu {
-    border-top: 2px solid #012247;
     border-radius: 0;
+    /* background: #8a3d47 !important; */
 }
 .ant-menu-light > .ant-menu:not(.ant-menu-horizontal) .ant-menu-item {
     border-bottom: 1px solid #dfdfdf;
@@ -27,16 +27,19 @@ body {
 .ant-menu-light > .ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover {
     background: transparent !important;
     font-weight: bold;
+    color: #59141d !important;
 }
 
 .ant-menu-light > .ant-menu:not(.ant-menu-horizontal) .ant-menu-item {
     border-bottom: 1px solid #dfdfdf;
     border-radius: 0 !important;
+    font-size: 16px;
+    color: #59141d;
 }
 
 .ant-menu-light > .ant-menu .ant-menu-item-selected {
     background: transparent !important;
-    color: #012247 !important;
+    color: #59141d !important;
     font-weight: bold;
 }
 

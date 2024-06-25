@@ -15,8 +15,8 @@ import Footer from '@/components/layout/footer/page';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '华盛达外语学校国际部',
-  description: '华盛达外语学校国际部',
+  title: '珠海希望之星实验学校',
+  description: '珠海希望之星实验学校',
   icons: {
     icon: 'https://icon-hsd.oss-cn-hangzhou.aliyuncs.com/2024/06/05/167_favicon(1).ico',
     shortcut: 'https://icon-hsd.oss-cn-hangzhou.aliyuncs.com/2024/06/05/167_favicon(1).ico',
