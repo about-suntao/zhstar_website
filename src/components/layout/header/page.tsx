@@ -36,12 +36,8 @@ function Header() {
       key: '/school',
     },
     {
-      label: '学部建设',
-      key: 'department',
-      children: [
-        { label: (<Link href="/department/management">管理团队</Link>), key: '/department/management' },
-        { label: '教学团队', key: '' },
-      ],
+      label: (<Link href="/department">学部建设</Link>),
+      key: '/department',
     },
     {
       label: (<Link href="/education">教育教学</Link>),

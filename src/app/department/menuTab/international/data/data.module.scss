@@ -1,0 +1,137 @@
+@media screen and (min-width: 1401px) {
+    .pages {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .container {
+            width: 87.5rem;
+            height: 18.13rem;
+            background-image: url('../../../../../../public/img/banner.webp');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            ul {
+                height: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                li {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    .num {
+                        font-family: Microsoft YaHei UI, sans-serif;
+                        font-weight: bold;
+                        font-size: 5.5rem;
+                        color: #ffffff;
+                        line-height: 8.8rem;
+                        letter-spacing: 7px;
+                    }
+                    .desc {
+                        font-family: Microsoft YaHei UI, sans-serif;
+                        font-weight: 400;
+                        font-size: 1.25rem;
+                        color: #ffffff;
+                        line-height: 2.25rem;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1400px) {
+    .pages {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .container {
+            width: 90%;
+            height: 17rem;
+            background-image: url('../../../../../../public/img/banner.webp');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            ul {
+                height: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                li {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    .num {
+                        font-family: Microsoft YaHei UI, sans-serif;
+                        font-weight: bold;
+                        font-size: 5rem;
+                        color: #ffffff;
+                        line-height: 7rem;
+                        letter-spacing: 7px;
+                    }
+                    .desc {
+                        font-family: Microsoft YaHei UI, sans-serif;
+                        font-weight: 400;
+                        font-size: 1.2rem;
+                        color: #ffffff;
+                        line-height: 2.25rem;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .pages {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .container {
+            width: 90%;
+            height: 17rem;
+            background-image: url('../../../../../../public/img/banner.webp');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            ul {
+                height: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                li {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    .num {
+                        font-family: Microsoft YaHei UI, sans-serif;
+                        font-weight: bold;
+                        font-size: 5rem;
+                        color: #ffffff;
+                        line-height: 7rem;
+                        letter-spacing: 7px;
+                    }
+                    .desc {
+                        font-family: Microsoft YaHei UI, sans-serif;
+                        font-weight: 400;
+                        font-size: 1.2rem;
+                        color: #ffffff;
+                        line-height: 2.25rem;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}

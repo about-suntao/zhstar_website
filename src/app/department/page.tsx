@@ -1,9 +1,12 @@
 import React from 'react'
+import DepartmentBanner from "./banner/banner"
+import MenuTab from './menuTab/menuTab'
 
 function Department() {
   return (
     <div>
-      Department
+      <DepartmentBanner></DepartmentBanner>
+      <MenuTab></MenuTab>
     </div>
   )
 }
