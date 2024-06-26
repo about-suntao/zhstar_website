@@ -15,8 +15,13 @@ type MenuItem = Required<MenuProps>['items'][number];
 
 function Header() {
 
+  const [isMenuVisible, setIsMenuVisible] = useState(true);
+
   const [current, setCurrent] = useState('home');
   const path = usePathname()
+
+  const [open, setOpen] = useState(false);
+
 
   function openNewWindow(url: string) {
     window.open(url, '_blank');
@@ -27,48 +32,69 @@ function Header() {
       key: 'home',
     },
     {
-      label: '学校概况',
-      key: 'school',
+      label: (<Link href="/school">学校概况</Link>),
+      key: '/school',
     },
     {
       label: '学部建设',
-      key: 'team',
+      key: 'department',
       children: [
-        { label: (<Link href="/team/management">管理团队</Link>), key: '/team/management' },
+        { label: (<Link href="/department/management">管理团队</Link>), key: '/department/management' },
         { label: '教学团队', key: '' },
       ],
     },
     {
-      label: (<Link href="/course">教育教学</Link>),
-      key: '/course',
+      label: (<Link href="/education">教育教学</Link>),
+      key: '/education',
     }, {
-      label: (<Link href="/international">校园生活</Link>),
-      key: '/international',
+      label: (<Link href="/life">校园生活</Link>),
+      key: '/life',
     },
     {
-      label: (<Link href="/campusClass">学校动态</Link>),
-      key: '/campusClass',
+      label: (<Link href="/schoolDynamic">学校动态</Link>),
+      key: '/schoolDynamic',
     },
     {
-      label: (<a onClick={() => openNewWindow('https://mp.weixin.qq.com/s/C2ealJO5Rd4JqakrxUECdw')}>招生报名</a>),
-      key: 'recruitStudent',
+      label: (<Link href="/recruitStudent">招生报名</Link>),
+      key: '/recruitStudent',
     },
+    // {
+    //   label: (<a onClick={() => openNewWindow('https://mp.weixin.qq.com/s/C2ealJO5Rd4JqakrxUECdw')}>招生报名</a>),
+    //   key: 'recruitStudent',
+    // },
   ];
 
   const onClick: MenuProps['onClick'] = (e) => {
     setCurrent(e.key);
   };
 
+  const onClose = () => {
+    setOpen(false);
+  };
 
-
+  const openDrawer = () => {
+    setOpen(!open);
+  }
 
   useEffect(() => {
+    console.log(path)
     if (path === '/') {
       setCurrent('home')
     } else {
       setCurrent(path)
     }
   }, [path])
+
+  // menu组件小于768隐藏后，放大不会重载，解决这个问题
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMenuVisible(window.innerWidth > 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles.header}>
@@ -77,7 +103,28 @@ function Header() {
           <Image src={logo} alt=''></Image>
         </div>
         <div className={styles.menu}>
-          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+          {isMenuVisible && (<Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />)}
+        </div>
+      </div>
+      <div className={styles.mobile}>
+        <div className={styles.logoImg}>
+          <Image src={logo} alt=''></Image>
+        </div>
+        <div className={styles.menu} >
+          <MenuOutlined onClick={openDrawer} />
+        </div>
+        <div className={styles.mobileNav} style={{ display: open ? '' : 'none' }}>
+          <Drawer
+            placement="right"
+            open={open}
+            closable={false}
+            getContainer={false}
+            onClose={onClose}
+          >
+            <div className={styles.drawerNav}>
+              <Menu onClick={onClick} selectedKeys={[current]} mode="inline" items={items} />
+            </div>
+          </Drawer>
         </div>
       </div>
     </div>

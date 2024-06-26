@@ -9,22 +9,27 @@ import logo from '../../../../public/img/home/logo.webp'
 import publicCode from '../../../../public/img/home/publicCode.webp'
 import wxCode from '../../../../public/img/home/wxCode.webp'
 
+import newImg1 from '../../../../public/img/home/new1.png'
+import newImg2 from '../../../../public/img/home/new2.png'
+import newImg3 from '../../../../public/img/home/new3.png'
+
+
 async function Footer() {
 
   const newsData = [
     {
       id: 1,
-      picture: publicCode,
+      picture: newImg1,
       title: '见贤思齐 励志前行',
       createTime: '2024-05-14',
     }, {
       id: 2,
-      picture: publicCode,
+      picture: newImg2,
       title: '专家引领促成长，潜心学习提质量',
       createTime: '2024-05-14',
     }, {
       id: 3,
-      picture: publicCode,
+      picture: newImg3,
       title: '强师立本赋能成长，以研促教提',
       createTime: '2024-05-14',
     },
