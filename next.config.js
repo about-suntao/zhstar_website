@@ -16,6 +16,12 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'icon-group.oss-cn-hangzhou.aliyuncs.com',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'icon-hsd.oss-cn-hangzhou.aliyuncs.com',
                 port: '',
                 pathname: '/**',

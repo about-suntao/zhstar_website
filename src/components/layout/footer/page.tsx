@@ -9,9 +9,9 @@ import logo from '../../../../public/img/home/logo.webp'
 import publicCode from '../../../../public/img/home/publicCode.webp'
 import wxCode from '../../../../public/img/home/wxCode.webp'
 
-import newImg1 from '../../../../public/img/home/new1.png'
-import newImg2 from '../../../../public/img/home/new2.png'
-import newImg3 from '../../../../public/img/home/new3.png'
+import newImg1 from '../../../../public/img/home/news1.webp'
+import newImg2 from '../../../../public/img/home/news2.webp'
+import newImg3 from '../../../../public/img/home/news3.webp'
 
 
 async function Footer() {
