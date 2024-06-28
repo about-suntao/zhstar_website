@@ -1,0 +1,103 @@
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        margin: 6.25rem 0;
+        width: 87.5rem;
+        .title{
+            display: flex;
+            align-items: center;
+            h2{
+                font-family: Microsoft YaHei, sans-serif;
+                font-weight: bold;
+                font-size: 2.25rem;
+                color: #140104;
+                line-height: 2.64rem;
+                letter-spacing: 2px;
+                text-align: left;
+            }
+            p{
+                margin-left: 1.25rem;
+                font-family: Abhaya Libre, sans-serif;
+                font-weight: 400;
+                font-size: 1.75rem;
+                color: #140104;
+                line-height: 2.8rem;
+                letter-spacing: 2px;
+            }
+        }
+        .desc{
+            margin-top: 1.25rem;
+            p{
+                font-family: Microsoft YaHei UI, sans-serif;
+                font-weight: 400;
+                font-size: 1.25rem;
+                color: #311116;
+                line-height: 2rem;
+                letter-spacing: 1px;
+            }
+        }
+        .picture{
+            margin-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: 49%;
+                height: auto;
+            }
+        }
+        .card{
+            margin-top: 2.5rem;
+            width: 100%;
+            padding: 2rem 2.75rem;
+            background: #59141D;
+            position: relative;
+            .serial{
+                position: absolute;
+                right: 1.56rem;
+                top: 0.63rem;
+                p{
+                    font-family: Arial, sans-serif;
+                    font-weight: bold;
+                    font-size: 2.25rem;
+                    color: #FFFFFF;
+                    line-height: 4.05rem;
+                    letter-spacing: 2px;
+                    text-align: justify;
+                }
+            }
+            .card_title{
+                font-family: Microsoft YaHei UI, sans-serif;
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: #FFFFFF;
+                line-height: 2.7rem;
+                letter-spacing: 1px;
+                display: flex;
+                span{
+                    font-size: 1.3rem;
+                    margin-right: 10px;
+                }
+            }
+            .triangle{
+                margin: 0.63rem 0;
+                img{
+                    width: 1.75rem;
+                    height: 1.06rem;
+                }
+            }
+            .card_desc{
+                p{
+                    font-family: Microsoft YaHei UI, sans-serif;
+                    font-weight: bold;
+                    font-size: 1.63rem;
+                    color: #FFFFFF;
+                    line-height: 2.92rem;
+                    letter-spacing: 2px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
