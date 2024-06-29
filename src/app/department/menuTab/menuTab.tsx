@@ -18,7 +18,7 @@ import imgH3 from '../../../../public/img/department/h3.webp'
 
 function MenuTab() {
 
-  const [activeMenu, setActiveMenu] = useState(4)
+  const [activeMenu, setActiveMenu] = useState(1)
 
   const data = [
     {
