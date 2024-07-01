@@ -1,0 +1,125 @@
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        width: 85rem;
+        margin: 6.25rem 0;
+        .list {
+            list-style: none;
+            li + li {
+                margin-top: 5rem;
+            }
+            li {
+                display: flex;
+                justify-content: space-between;
+                .cover {
+                    min-width: 33.13rem;
+                    max-width: 33.13rem;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .content {
+                    min-width: 48.5rem;
+                    max-width: 48.5rem;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    h3 {
+                        width: 100%;
+                        font-family: Microsoft YaHei, sans-serif;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        color: #140104;
+                        line-height: 2.4rem;
+                        letter-spacing: 1px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                    }
+                    .desc {
+                        width: 100%;
+                        margin-top: 1.25rem;
+                        p {
+                            font-family: Microsoft YaHei, sans-serif;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            color: #311116;
+                            line-height: 1.6rem;
+                            letter-spacing: 1px;
+                            text-align: justify;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                    .detail {
+                        margin-top: 1.5rem;
+                        display: flex;
+                        justify-content: space-between;
+                        .time {
+                            p {
+                                font-family: Arial, sans-serif;
+                                font-weight: bold;
+                                font-size: 1.25rem;
+                                color: #796a6c;
+                                line-height: 2rem;
+                                letter-spacing: 1px;
+                            }
+                        }
+                        .btn {
+                            button {
+                                border: none;
+                                width: 3.75rem;
+                                height: 3.75rem;
+                                background: #59141d;
+                                border-radius: 50%;
+                                img {
+                                    min-width: 2.11rem;
+                                    max-width: 2.11rem;
+                                    height: 2.11rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pagination {
+            margin-top: 5rem;
+            :global {
+                .ant-pagination-item {
+                    width: 2rem;
+                    height: 2rem;
+                    background: #ffffff;
+                    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+                    border: 0.06rem solid #e0e0e0;
+                    a {
+                        font-family: DIN, sans-serif;
+                        font-weight: 500;
+                        font-size: 1rem;
+                        color: #727272;
+                    }
+                }
+                .ant-pagination-item-active {
+                    width: 2rem;
+                    height: 2rem;
+                    background: #59141d;
+                    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+                    a {
+                        font-family: DIN, sans-serif;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

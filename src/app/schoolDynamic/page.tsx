@@ -1,10 +1,13 @@
 import React from 'react'
+import Banner from './banner/banner'
+import MenuTab from './menuTab/menuTab'
 
 function SchoolDynamic() {
   return (
-    <div>
-      Department
-    </div>
+    <>
+      <Banner></Banner>
+      <MenuTab></MenuTab>
+    </>
   )
 }
 
