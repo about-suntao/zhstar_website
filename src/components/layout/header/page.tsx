@@ -51,13 +51,19 @@ function Header() {
       key: '/schoolDynamic',
     },
     {
-      label: (<Link href="/recruitStudent">招生报名</Link>),
+      label: '招生报名',
       key: '/recruitStudent',
+      children: [
+        {
+          label: (<a onClick={() => openNewWindow('https://mp.weixin.qq.com/s/bMV-gvsUYnhU2izUZcDMgA')}>招生简章</a>),
+          key: 'recruitStudent',
+        }, {
+          label: (<a onClick={() => openNewWindow('http://xwzx.cdbyrj.com/wxzs/StudentAsistant/Index?teacherId=0&openId=o5UlTtwWd8yYGec_TDwQaPjFOI0g')}>报名入口</a>),
+          key: 'apply',
+        },
+      ]
     },
-    // {
-    //   label: (<a onClick={() => openNewWindow('https://mp.weixin.qq.com/s/C2ealJO5Rd4JqakrxUECdw')}>招生报名</a>),
-    //   key: 'recruitStudent',
-    // },
+
   ];
 
   const onClick: MenuProps['onClick'] = (e) => {
