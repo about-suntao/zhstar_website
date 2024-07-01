@@ -11,6 +11,7 @@ import 'swiper/css/grid';
 
 import Header from '@/components/layout/header/page'
 import Footer from '@/components/layout/footer/page';
+import BackTop from '@/components/backTop/backTop'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header></Header>
           {children}
           <Footer></Footer>
+          <BackTop></BackTop>
         </AntdRegistry>
       </body>
     </html>
