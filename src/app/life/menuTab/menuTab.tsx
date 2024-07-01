@@ -11,19 +11,19 @@ function MenuTab() {
 
   const [activeMenu, setActiveMenu] = useState(1)
 
-  const data =[
+  const data = [
     {
-      id:1,
-      title:'校园环境',
+      id: 1,
+      title: '校园环境',
     }, {
-      id:2,
-      title:'生活服务',
+      id: 2,
+      title: '生活服务',
     }, {
-      id:3,
-      title:'国旗下讲话',
+      id: 3,
+      title: '国旗下讲话',
     },
   ]
- 
+
   return (
     <div className={styles.pages}>
       <div className={styles.menu}>
@@ -43,13 +43,13 @@ function MenuTab() {
         </ul>
       </div>
       <div className={styles.tabs}>
-       {
-        activeMenu ===1 ?
-        <Environment></Environment>
-        :  activeMenu ===2 ?
-        <Service></Service>
-        : <Speech></Speech>
-       }
+        {
+          activeMenu === 1 ?
+            <Environment></Environment>
+            : activeMenu === 2 ?
+              <Service></Service>
+              : <Speech></Speech>
+        }
       </div>
     </div>
   )

@@ -1,0 +1,80 @@
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        margin-top: 5rem;
+        padding-bottom: 6.5rem;
+        margin-bottom: 6.2rem;
+        width: 91.5rem;
+        position: relative;
+        :global {
+            .swiper-button-disabled {
+                border: none;
+                width: 3.9rem;
+                height: 3.17rem;
+                background: #f0f0f0 !important;
+                border-radius: 0.13rem;
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+        .picture {
+            :global {
+                .swiper {
+                    width: 100%;
+                }
+                .swiper-slide {
+                    width: 32.25rem;
+                    position: relative;
+                }
+            }
+            .card_img {
+                width: 100%;
+                height: auto;
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+            .card_title {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 9.5rem;
+                height: 3rem;
+                background: rgba(255, 255, 255, 0.88);
+                box-shadow: 0rem -0.44rem 0rem 0rem #59141d;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Microsoft YaHei, sans-serif;
+                font-weight: bold;
+                font-size: 1.25rem;
+                color: #311116;
+                line-height: 2rem;
+                letter-spacing: 1px;
+            }
+        }
+        .btnGroup {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+            button + button {
+                margin-left: 3.69rem;
+            }
+            button {
+                border: none;
+                width: 3.9rem;
+                height: 3.17rem;
+                background: #59141d;
+                border-radius: 0.13rem;
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

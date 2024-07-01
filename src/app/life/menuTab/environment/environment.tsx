@@ -1,11 +1,12 @@
 import React from 'react'
-import styles from './environment.module.scss'
+import Campus from './campus/campus'
+import EnvironmentList from './environmentList/environmentList'
+
 function Environment() {
   return (
-    <div className={styles.pages}>
-      <div className={styles.container}>
-        
-      </div>
+    <div>
+      <Campus></Campus>
+      <EnvironmentList></EnvironmentList>
     </div>
   )
 }
