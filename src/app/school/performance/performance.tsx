@@ -23,12 +23,9 @@ function Performance() {
           <Image src={img2} alt=''></Image>
         </div>
         <div className={styles.card}>
-          {/* <div className={styles.serial}>
-            <p>01</p>
-          </div> */}
           <div className={styles.card_title}>
             <span>竞赛</span>
-            <p>近几年来，我校学生共获得：</p>
+            <p>近几年来，我校学生共获得:</p>
           </div>
           <div className={styles.triangle}>
             <Image src={triangleImg} alt=''></Image>
