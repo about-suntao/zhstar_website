@@ -44,9 +44,12 @@
                 display: flex;
                 justify-content: space-between;
                 list-style: none;
+                li + li {
+                    margin-left: 1.25rem;
+                }
                 li {
-                    width: 32%;
-                    height: 18rem;
+                    width: auto;
+                    height: auto;
                     img {
                         width: 100%;
                         height: 100%;
@@ -103,9 +106,12 @@
                 display: flex;
                 justify-content: space-between;
                 list-style: none;
+                li + li {
+                    margin-left: 1rem;
+                }
                 li {
-                    width: 32%;
-                    height: 16rem;
+                    width: auto;
+                    height: auto;
                     img {
                         width: 100%;
                         height: 100%;
@@ -162,9 +168,12 @@
                 display: flex;
                 justify-content: space-between;
                 list-style: none;
+                li + li {
+                    margin-left: 1rem;
+                }
                 li {
-                    width: 32%;
-                    height: 14.5rem;
+                    width: auto;
+                    height: auto;
                     img {
                         width: 100%;
                         height: 100%;
@@ -221,9 +230,12 @@
                 display: flex;
                 justify-content: space-between;
                 list-style: none;
+                li + li {
+                    margin-left: 1rem;
+                }
                 li {
-                    width: 32%;
-                    height: 13rem;
+                    width: auto;
+                    height: auto;
                     img {
                         width: 100%;
                         height: 100%;
@@ -280,9 +292,12 @@
                 display: flex;
                 justify-content: space-between;
                 list-style: none;
+                li + li {
+                    margin-left: 1rem;
+                }
                 li {
-                    width: 32%;
-                    height: 12rem;
+                    width: auto;
+                    height: auto;
                     img {
                         width: 100%;
                         height: 100%;
