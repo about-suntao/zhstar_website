@@ -42,6 +42,14 @@
                     }
                 }
             }
+            .desc {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                p {
+                    font-size: 1.5rem;
+                }
+            }
             .videoDialog {
                 :global {
                     .ant-modal-root .ant-modal-centered .ant-modal {
@@ -115,6 +123,14 @@
                     }
                 }
             }
+            .desc {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                p {
+                    font-size: 1.5rem;
+                }
+            }
             .videoDialog {
                 :global {
                     .ant-modal-root .ant-modal-centered .ant-modal {
@@ -186,6 +202,14 @@
                         width: 6rem;
                         height: 6rem;
                     }
+                }
+            }
+            .desc {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                p {
+                    font-size: 1.5rem;
                 }
             }
             .videoDialog {
@@ -261,6 +285,14 @@
                     }
                 }
             }
+            .desc {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                p {
+                    font-size: 1.5rem;
+                }
+            }
             .videoDialog {
                 :global {
                     .ant-modal-root .ant-modal-centered .ant-modal {
@@ -331,6 +363,14 @@
                         width: 3rem;
                         height: 3rem;
                     }
+                }
+            }
+            .desc {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                p {
+                    font-size: 1.2rem;
                 }
             }
             .videoDialog {

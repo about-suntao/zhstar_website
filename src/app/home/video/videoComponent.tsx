@@ -36,6 +36,9 @@ function VideoComponents() {
             <Image src={playImg} alt=''></Image>
           </div>
         </div>
+        <div className={styles.desc}>
+          <p>校园生活概览</p>
+        </div>
         <div id="1" className={styles.videoDialog}>
           <Modal
             open={isModalOpen}

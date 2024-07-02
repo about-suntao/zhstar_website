@@ -1,14 +1,15 @@
-.pages{
+.pages {
     display: flex;
     justify-content: center;
     align-items: center;
-    .container{
+    .container {
         margin: 6.25rem 0;
         width: 87.5rem;
-        .title{
+        .title {
+            padding-left: 3rem;
             display: flex;
             align-items: center;
-            h2{
+            h2 {
                 font-family: Microsoft YaHei, sans-serif;
                 font-weight: bold;
                 font-size: 2.25rem;
@@ -17,7 +18,7 @@
                 letter-spacing: 2px;
                 text-align: left;
             }
-            p{
+            p {
                 margin-left: 1.25rem;
                 font-family: Abhaya Libre, sans-serif;
                 font-weight: 400;
@@ -27,9 +28,10 @@
                 letter-spacing: 2px;
             }
         }
-        .desc{
+        .desc {
+            padding-left: 3rem;
             margin-top: 1.25rem;
-            p{
+            p {
                 font-family: Microsoft YaHei UI, sans-serif;
                 font-weight: 400;
                 font-size: 1.25rem;
@@ -38,61 +40,65 @@
                 letter-spacing: 1px;
             }
         }
-        .picture{
+        .picture {
             margin-top: 2.5rem;
             display: flex;
             justify-content: space-between;
-            img{
+            img {
                 width: 49%;
                 height: auto;
             }
         }
-        .card{
+        .card {
             margin-top: 2.5rem;
             width: 100%;
             padding: 2rem 2.75rem;
-            background: #59141D;
+            background: #59141d;
             position: relative;
-            .serial{
+            .serial {
                 position: absolute;
                 right: 1.56rem;
                 top: 0.63rem;
-                p{
+                p {
                     font-family: Arial, sans-serif;
                     font-weight: bold;
                     font-size: 2.25rem;
-                    color: #FFFFFF;
+                    color: #ffffff;
                     line-height: 4.05rem;
                     letter-spacing: 2px;
                     text-align: justify;
                 }
             }
-            .card_title{
+            .card_title {
+                position: relative;
+                z-index: 1;
                 font-family: Microsoft YaHei UI, sans-serif;
                 font-weight: bold;
                 font-size: 1.3rem;
-                color: #FFFFFF;
+                color: #ffffff;
                 line-height: 2.7rem;
                 letter-spacing: 1px;
                 display: flex;
-                span{
+                span {
                     font-size: 1.5rem;
                     margin-right: 10px;
                 }
             }
-            .triangle{
-                margin: 0.63rem 0;
-                img{
-                    width: 1.75rem;
-                    height: 1.06rem;
+            .triangle {
+                position: relative;
+                top: -1.5rem;
+                z-index: 0;
+                img {
+                    width: 3rem;
+                    height: 2.5rem;
                 }
             }
-            .card_desc{
-                p{
+            .card_desc {
+                p {
                     font-family: Microsoft YaHei UI, sans-serif;
                     font-weight: bold;
                     font-size: 1.63rem;
-                    color: #FFFFFF;
+                    color: #ffffff;
                     line-height: 2.92rem;
                     letter-spacing: 2px;
                     text-align: justify;

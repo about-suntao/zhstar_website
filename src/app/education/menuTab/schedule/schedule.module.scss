@@ -1,4 +1,4 @@
-.pages{
+.pages {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,15 +7,15 @@
     background-size: 100% 100%;
     background-position: center center;
     background-attachment: fixed;
-    .container{
-      max-width: 120rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-        .table{
+    .container {
+        max-width: 120rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .table {
             margin: 6.25rem;
-            width: 82.75rem;
-            img{
+            width: 60rem;
+            img {
                 width: 100%;
                 height: auto;
             }

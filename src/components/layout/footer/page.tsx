@@ -85,13 +85,13 @@ async function Footer() {
             <div className={styles.cardBody}>
               <div className={styles.right}>
                 <p>珠海市香洲区湾仔银湾路1689号 </p>
-                <p>（导航搜索“希望之星实验学校”即可）</p>
+                <p>(导航搜索“希望之星实验学校”即可)</p>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.news}>
-          <h2>新闻资讯</h2>
+          <h2>校园动态</h2>
           {
             newsData.map((item: any) => {
               return (
