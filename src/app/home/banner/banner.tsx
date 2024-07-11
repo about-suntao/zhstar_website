@@ -1,39 +1,47 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import styles from './banner.module.scss'
 import { useRouter } from 'next/navigation';
 import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules'
-import banner1 from '../../../../public/img/home/banner1.webp'
-import banner2 from '../../../../public/img/home/banner2.webp'
+import fetchRequest from '@/utils/fetchRequest';
 
 SwiperCore.use([Autoplay]);
 
 function Banner() {
-  const data = [
-    {
-      id: 1,
-      url: banner1,
-      mobileUrl: banner1,
-      link: '',
-      title: '崇德博学 创新务实',
-    }, {
-      id: 2,
-      url: banner2,
-      mobileUrl: banner2,
-      link: '',
-      title: '崇德博学 创新务实',
-    },
-  ]
+
+  const [data, setData] = useState<any>([])
+  const [dataLoaded, setDataLoaded] = useState<boolean>(false); // 新增状态
+
+
+  const getData = async () => {
+    const res = await fetchRequest.get('/icon/web/slideshow/queryAll');
+    setDataLoaded(true); // 设置数据已加载
+    setData(res.data)
+  }
+
+  useEffect(() => {
+    getData()
+  }, []);
+
   const router = useRouter()
 
-  const handleRoute = (url: string) => {
-    if (url !== '') {
-      router.push(url)
+  const handleRoute = (item: any) => {
+    if (item.interiorUrl && item.interiorUrl !== '') {
+      router.push(item.interiorUrl)
+    } else if (item.withoutUrl && item.withoutUrl !== '') {
+      window.open(item.withoutUrl, '_blank');
     }
   }
+
+  // 确保获取数据后再加载
+  if (!dataLoaded) {
+    return null;
+  }
+
+
   return (
     <div className={styles.pages}>
       <div className={styles.container}>
@@ -47,12 +55,12 @@ function Banner() {
           pagination={{ clickable: true }}
         >
           {
-            data.map((item, index) => {
+            data.map((item: any, index: any) => {
               return (
-                <SwiperSlide key={item.id} onClick={() => handleRoute(item.link)}>
-                  <Image className={styles.bannerImg} src={item.url} alt={item.title}></Image>
+                <SwiperSlide key={item.id} onClick={() => handleRoute(item)}>
+                  <Image className={styles.bannerImg} src={item.picture} alt={item.name} width={1920} height={800}></Image>
                   <div className={styles.title}>
-                    <h1>{item.title}</h1>
+                    <h1>{item.name}</h1>
                   </div>
                 </SwiperSlide>
               )

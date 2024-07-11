@@ -79,7 +79,6 @@ function Header() {
   }
 
   useEffect(() => {
-    console.log(path)
     if (path === '/') {
       setCurrent('home')
     } else {

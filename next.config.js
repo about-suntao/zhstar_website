@@ -10,19 +10,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'icon-apply.oss-cn-hangzhou.aliyuncs.com',
-                port: '',
-                pathname: '/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'icon-group.oss-cn-hangzhou.aliyuncs.com',
-                port: '',
-                pathname: '/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'icon-hsd.oss-cn-hangzhou.aliyuncs.com',
+                hostname: 'icon-zhuhai.oss-cn-hangzhou.aliyuncs.com',
                 port: '',
                 pathname: '/**',
             },

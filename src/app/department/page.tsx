@@ -1,14 +1,16 @@
 import React from 'react'
-import DepartmentBanner from "./banner/banner"
+import Banner from '@/components/banner/banner'
+
 import MenuTab from './menuTab/menuTab'
 
 function Department() {
   return (
     <div>
-      <DepartmentBanner></DepartmentBanner>
+      <Banner id={2}></Banner>
       <MenuTab></MenuTab>
     </div>
   )
 }
 
 export default Department
+
