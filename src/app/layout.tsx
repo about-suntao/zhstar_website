@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   title: '珠海希望之星实验学校',
   description: '珠海希望之星实验学校',
   icons: {
-    icon: 'https://icon-hsd.oss-cn-hangzhou.aliyuncs.com/2024/06/05/167_favicon(1).ico',
-    shortcut: 'https://icon-hsd.oss-cn-hangzhou.aliyuncs.com/2024/06/05/167_favicon(1).ico',
-    apple: 'https://icon-hsd.oss-cn-hangzhou.aliyuncs.com/2024/06/05/167_favicon(1).ico',
+    icon: 'https://icon-zhuhai.oss-cn-hangzhou.aliyuncs.com/2024/07/10/938_favicon.png',
+    shortcut: 'https://icon-zhuhai.oss-cn-hangzhou.aliyuncs.com/2024/07/10/938_favicon.png',
+    apple: 'https://icon-zhuhai.oss-cn-hangzhou.aliyuncs.com/2024/07/10/938_favicon.png',
     other: {
-      rel: 'https://icon-hsd.oss-cn-hangzhou.aliyuncs.com/2024/06/05/167_favicon(1).ico',
-      url: 'https://icon-hsd.oss-cn-hangzhou.aliyuncs.com/2024/06/05/167_favicon(1).ico',
+      rel: 'https://icon-zhuhai.oss-cn-hangzhou.aliyuncs.com/2024/07/10/938_favicon.png',
+      url: 'https://icon-zhuhai.oss-cn-hangzhou.aliyuncs.com/2024/07/10/938_favicon.png',
     },
   },
 }
