@@ -8,7 +8,7 @@ import fetchRequest from '@/utils/fetchRequest';
 
 import backImg from '../.././../../../public/img/schoolDynamic/back.webp'
 
-function Article({ id, activeMenu, backList }: any) {
+function Article({ id = null, backList = () => { } }: any) {
   const [data, setData] = useState<any>([])
   const getData = async (articleId: number) => {
     const res: any = await fetchRequest.get(`/icon/web/news/${articleId}`);
@@ -26,7 +26,7 @@ function Article({ id, activeMenu, backList }: any) {
             separator=">"
             items={[
               { title: '当前位置' },
-              { title: activeMenu.name },
+              { title: data?.typeName, href: '/schoolDynamic' },
               { title: data?.title }
             ]}
           />

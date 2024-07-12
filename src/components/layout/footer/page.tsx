@@ -1,7 +1,11 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import styles from './page.module.scss'
 import Image from 'next/image'
 import Link from 'next/link';
+import fetchRequest from '@/utils/fetchRequest';
+import { useRouter } from 'next/navigation';
+
 
 import { EnvironmentFilled, PhoneFilled } from '@ant-design/icons';
 
@@ -9,31 +13,33 @@ import logo from '../../../../public/img/home/logo.webp'
 import publicCode from '../../../../public/img/home/publicCode.webp'
 import wxCode from '../../../../public/img/home/wxCode.webp'
 
-import newImg1 from '../../../../public/img/home/news1.webp'
-import newImg2 from '../../../../public/img/home/news2.webp'
-import newImg3 from '../../../../public/img/home/news3.webp'
+function Footer() {
+  const router = useRouter()
+  const [data, setData] = useState<any>([])
+  const [dataLoaded, setDataLoaded] = useState<boolean>(false); // 新增状态
 
+  const getData = async () => {
+    const params = {
+      pageNum: 1,
+      pageSize: 3,
+    }
+    const res: any = await fetchRequest.get(`/icon/web/news/queryByPage`, params);
+    setData(res.data.list)
+    setDataLoaded(true);
+  }
 
-async function Footer() {
+  const handleRoute = (id: number) => {
+    router.push(`/schoolDynamic/${id}`)
+  }
 
-  const newsData = [
-    {
-      id: 1,
-      picture: newImg1,
-      title: '见贤思齐 励志前行',
-      createTime: '2024-05-14',
-    }, {
-      id: 2,
-      picture: newImg2,
-      title: '专家引领促成长，潜心学习提质量',
-      createTime: '2024-05-14',
-    }, {
-      id: 3,
-      picture: newImg3,
-      title: '强师立本赋能成长，以研促教提',
-      createTime: '2024-05-14',
-    },
-  ]
+  useEffect(() => {
+    getData()
+  }, []);
+
+  // 确保获取数据后再加载
+  if (!dataLoaded) {
+    return null;
+  }
 
   return (
     <div className={styles.footer}>
@@ -93,11 +99,11 @@ async function Footer() {
         <div className={styles.news}>
           <h2>校园动态</h2>
           {
-            newsData.map((item: any) => {
+            data.map((item: any) => {
               return (
-                <div className={styles.card} key={item.id}>
+                <div className={styles.card} key={item.id} onClick={() => handleRoute(item.id)} >
                   <div className={styles.card_left}>
-                    <Image src={item.picture} alt=''></Image>
+                    <Image src={item.picture} alt='' width={100} height={100} priority></Image>
                   </div>
                   <div className={styles.card_right}>
                     <p>{item.title}</p>
@@ -109,7 +115,7 @@ async function Footer() {
           }
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

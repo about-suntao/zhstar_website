@@ -151,6 +151,7 @@
                         flex-direction: column;
                         justify-content: center;
                         p {
+                            max-width: 15rem;
                             margin-top: 0.63rem;
                             margin-bottom: 0.75rem;
                             font-size: 1rem;
@@ -158,6 +159,9 @@
                             font-weight: 400;
                             color: #e7b82a;
                             line-height: 1.17rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         span {
                             font-size: 0.88rem;
@@ -326,6 +330,7 @@
                         flex-direction: column;
                         justify-content: center;
                         p {
+                            max-width: 15rem;
                             margin-top: 0.63rem;
                             margin-bottom: 0.75rem;
                             font-size: 1rem;
@@ -333,6 +338,9 @@
                             font-weight: 400;
                             color: #e7b82a;
                             line-height: 1.17rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         span {
                             font-size: 0.88rem;
@@ -505,6 +513,7 @@
                         flex-direction: column;
                         justify-content: center;
                         p {
+                            max-width: 15rem;
                             margin-top: 0.63rem;
                             margin-bottom: 0.75rem;
                             font-size: 1rem;
@@ -512,6 +521,9 @@
                             font-weight: 400;
                             color: #e7b82a;
                             line-height: 1.17rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         span {
                             font-size: 0.88rem;
@@ -691,6 +703,7 @@
                         flex-direction: column;
                         justify-content: center;
                         p {
+                            max-width: 18rem;
                             margin-top: 0.63rem;
                             margin-bottom: 0.75rem;
                             font-size: 1rem;
@@ -698,6 +711,9 @@
                             font-weight: 400;
                             color: #e7b82a;
                             line-height: 1.17rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         span {
                             font-size: 0.88rem;
