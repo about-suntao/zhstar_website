@@ -1,51 +1,51 @@
-.pages{
+.pages {
     display: flex;
     justify-content: center;
     align-content: center;
-    .contianer{
+    .container {
         margin-bottom: 6.25rem;
         width: 80rem;
-        ul{
+        ul {
             width: 100%;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 3.75rem 0;
-            li{
+            li {
                 width: 48%;
                 min-height: 20.5rem;
                 display: flex;
                 padding: 0.81rem 1.13rem;
-                background: #FFFFFF;
-                box-shadow: 0rem 0rem 0.34rem 0rem rgba(19,1,4,0.17);
+                background: #ffffff;
+                box-shadow: 0rem 0rem 0.34rem 0rem rgba(19, 1, 4, 0.17);
                 border-radius: 0.13rem 0.13rem 0.13rem 0.13rem;
-                .picture{
-                    img{
+                .picture {
+                    img {
                         width: 14.38rem;
                         height: auto;
                     }
                 }
-                .introduce{
-                   margin-left: 1.25rem;
-                   h3{
-                    margin-top: 1.81rem;
-                    font-family: Microsoft YaHei UI,sans-serif;
-                    font-weight: bold;
-                    font-size: 1.25rem;
-                    color: #140104;
-                    line-height: 2rem;
-                    letter-spacing: 1px;
-                   }
-                   .desc{
-                     margin: 1rem 0;
-                     font-family: Microsoft YaHei UI, sans-serif;
+                .introduce {
+                    margin-left: 1.25rem;
+                    h3 {
+                        margin-top: 1.81rem;
+                        font-family: Microsoft YaHei UI, sans-serif;
+                        font-weight: bold;
+                        font-size: 1.25rem;
+                        color: #140104;
+                        line-height: 2rem;
+                        letter-spacing: 1px;
+                    }
+                    .desc {
+                        margin: 1rem 0;
+                        font-family: Microsoft YaHei UI, sans-serif;
                         font-weight: 400;
                         font-size: 0.88rem;
                         color: #311116;
                         line-height: 1.4rem;
                         letter-spacing: 1px;
-                   }
-                   .list{
+                    }
+                    .list {
                         font-family: Microsoft YaHei UI, sans-serif;
                         font-weight: 400;
                         font-size: 0.85rem;
@@ -53,11 +53,11 @@
                         line-height: 1.4rem;
                         letter-spacing: 1px;
                         text-align: justify;
-                        span{
-                          font-weight: bold; 
-                          font-size: 0.88rem;
+                        span {
+                            font-weight: bold;
+                            font-size: 0.88rem;
                         }
-                   } 
+                    }
                 }
             }
         }
