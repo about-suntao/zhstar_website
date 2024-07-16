@@ -32,6 +32,10 @@ function Footer() {
     router.push(`/schoolDynamic/${id}`)
   }
 
+  function openNewWindow(url: string) {
+    window.open(url, '_blank');
+  }
+
   useEffect(() => {
     getData()
   }, []);
@@ -89,7 +93,7 @@ function Footer() {
           <div className={styles.card}>
             <p> <EnvironmentFilled /> 学校地址</p>
             <div className={styles.cardBody}>
-              <div className={styles.right}>
+              <div className={styles.right} onClick={() => openNewWindow('https://www.amap.com/place/B02F4025Y7')}>
                 <p>珠海市香洲区湾仔银湾路1689号 </p>
                 <p>(导航搜索“希望之星实验学校”即可)</p>
               </div>
