@@ -5,19 +5,13 @@ import { useRouter } from 'next/navigation'
 
 function ArticleDetail({ params }: any) {
   const router = useRouter()
-  const [articleId, setArticleId] = useState<any>(null)
-
   const backList = () => {
     router.back()
   }
 
-  useEffect(() => {
-    setArticleId(params.id)
-  }, [])
-
   return (
     <div>
-      {articleId && <Article id={articleId} backList={backList}></Article>}
+      {params?.id && <Article id={params.id} backList={backList}></Article>}
     </div>
   )
 }
