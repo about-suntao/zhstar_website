@@ -9,7 +9,8 @@ function Schedule() {
     <div className={styles.pages}>
       <div className={styles.container}>
         <div className={styles.table}>
-            <Image src={tableImg} alt=''></Image>
+          <Image src={'https://icon-zhuhai.oss-cn-hangzhou.aliyuncs.com/2024/07/17/114_schedule.webp'}
+            alt='' width={600} height={2000} priority></Image>
         </div>
       </div>
     </div>
