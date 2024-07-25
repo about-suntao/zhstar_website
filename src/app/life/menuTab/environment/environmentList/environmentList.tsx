@@ -21,7 +21,7 @@ function EnvironmentList() {
   const nextRef = useRef(null);
 
   const getData = async () => {
-    const res = await fetchRequest.get('/icon/web/surroundings/queryAll');
+    const res = await fetchRequest.get('/icon/web/surroundings/queryAll', { type: 1 });
     setDataLoaded(true); // 设置数据已加载
     setData(res.data)
 

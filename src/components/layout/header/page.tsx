@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { MenuOutlined, SearchOutlined } from '@ant-design/icons';
 import { Drawer, Menu } from 'antd';
 import type { MenuProps } from 'antd';
+import fetchRequest from '@/utils/fetchRequest'
 
 import styles from './page.module.scss'
 
@@ -22,6 +23,14 @@ function Header() {
 
   const [open, setOpen] = useState(false);
 
+  const [data, setData] = useState<any>([])
+  const [dataLoaded, setDataLoaded] = useState<boolean>(false); // 新增状态
+
+  const getData = async () => {
+    const res: any = await fetchRequest.get(`/icon/web/url/queryAll`);
+    setData(res.data)
+    setDataLoaded(true);
+  }
 
   function openNewWindow(url: string) {
     window.open(url, '_blank');
@@ -55,10 +64,10 @@ function Header() {
       key: '/recruitStudent',
       children: [
         {
-          label: (<a onClick={() => openNewWindow('https://mp.weixin.qq.com/s/bMV-gvsUYnhU2izUZcDMgA')}>招生简章</a>),
+          label: (<a onClick={() => openNewWindow(`${data[0]?.url}`)}>{data[0]?.name}</a>),
           key: 'recruitStudent',
         }, {
-          label: (<a onClick={() => openNewWindow('http://xwzx.cdbyrj.com/wxzs/StudentAsistant/Index?teacherId=0&openId=o5UlTtwWd8yYGec_TDwQaPjFOI0g')}>报名入口</a>),
+          label: (<a onClick={() => openNewWindow(`${data[1]?.url}`)}>{data[1]?.name}</a>),
           key: 'apply',
         },
       ]
@@ -88,6 +97,7 @@ function Header() {
 
   // menu组件小于768隐藏后，放大不会重载，解决这个问题
   useEffect(() => {
+    getData()
     const handleResize = () => {
       setIsMenuVisible(window.innerWidth > 768);
     };
@@ -96,6 +106,11 @@ function Header() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // 确保获取数据后再加载
+  if (!dataLoaded) {
+    return null;
+  }
 
   return (
     <div className={styles.header}>
