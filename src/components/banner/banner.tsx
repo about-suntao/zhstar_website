@@ -1,27 +1,16 @@
-'use client'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from './banner.module.scss'
 import Image from 'next/image'
 import fetchRequest from '@/utils/fetchRequest'
 
-function Banner({ id }: any) {
-  const [data, setData] = useState<any>([])
-  const [dataLoaded, setDataLoaded] = useState<boolean>(false); // 新增状态
 
-  const getData = async () => {
-    const res = await fetchRequest.get(`/icon/web/menu/${id}`);
-    setDataLoaded(true); // 设置数据已加载
-    setData(res.data)
-  }
+async function getData(id: number) {
+  const res = await fetchRequest.get(`/icon/web/menu/${id}`, null, { cache: 'no-store' });
+  return res.data
+}
 
-  useEffect(() => {
-    getData()
-  }, []);
-
-  // 确保获取数据后再加载
-  if (!dataLoaded) {
-    return null;
-  }
+async function Banner({ id }: any) {
+  const data = await getData(id)
   return (
     <div className={styles.pages}>
       <div className={styles.container}>

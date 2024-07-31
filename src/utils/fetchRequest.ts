@@ -5,12 +5,12 @@ const fetchRequest = {
     baseUrl: 'http://back.zhstar.cn',
     // baseUrl: 'http://192.168.111.87:8080',
 
-    get: (url: string, params?: any) => {
+    get: (url: string, params?: any, methods?: any) => {
         const searchParams = params ? new URLSearchParams(params).toString() : ''
         const requestUrl = searchParams
             ? `${fetchRequest.baseUrl}${url}?${searchParams}`
             : `${fetchRequest.baseUrl}${url}`
-        return fetch(requestUrl)
+        return fetch(requestUrl, methods)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`Network response was not ok: ${response.statusText}`)
