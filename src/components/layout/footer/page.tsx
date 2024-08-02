@@ -119,6 +119,9 @@ function Footer() {
           }
         </div>
       </div>
+      <div className={styles.number}>
+        <p>粤ICP备17014459号</p>
+      </div>
     </div >
   )
 }

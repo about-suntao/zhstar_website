@@ -5,7 +5,9 @@
         height: 33.5rem;
         display: flex;
         justify-content: center;
+        align-content: center;
         align-items: center;
+        flex-wrap: wrap;
         .container {
             width: 87.5rem;
             padding-top: 2.69rem;
@@ -174,6 +176,14 @@
                 }
             }
         }
+        .number {
+            margin-top: 3rem;
+            width: 100%;
+            p {
+                text-align: center;
+                color: gray;
+            }
+        }
     }
 }
 
@@ -184,7 +194,9 @@
         height: 33.5rem;
         display: flex;
         justify-content: center;
+        align-content: center;
         align-items: center;
+        flex-wrap: wrap;
         .container {
             width: 90%;
             padding-top: 2.69rem;
@@ -353,6 +365,14 @@
                 }
             }
         }
+        .number {
+            margin-top: 3rem;
+            width: 100%;
+            p {
+                text-align: center;
+                color: gray;
+            }
+        }
     }
 }
 
@@ -363,6 +383,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
         .container {
             width: 90%;
             padding: 3rem 0;
@@ -536,6 +558,14 @@
                 }
             }
         }
+        .number {
+            margin-bottom: 3rem;
+            width: 100%;
+            p {
+                text-align: center;
+                color: gray;
+            }
+        }
     }
 }
 
@@ -546,6 +576,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         .container {
             width: 80%;
             padding: 3rem 0;
@@ -724,6 +755,14 @@
                         }
                     }
                 }
+            }
+        }
+        .number {
+            margin-bottom: 3rem;
+            width: 100%;
+            p {
+                text-align: center;
+                color: gray;
             }
         }
     }
